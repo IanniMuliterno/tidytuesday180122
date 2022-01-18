@@ -1,0 +1,60 @@
+---
+title: "Untitled"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## GitHub Documents
+
+Olá, esta é minha primeira vez participando de um tidytuesday, a ideia é ver o que consigo fazer dedicando 2h à analise de uma determinada base.
+
+### Carregando dados
+
+
+```{r loading}
+library(tidyverse)
+library(ggplot2)
+
+chocolate <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-18/chocolate.csv')
+
+```
+
+Nota de alguns pontos observados por especialistas em chocolate
+
+* tempo de produção
+* qualidade dos ingredientes
+  * muito açucar 
+  * derrete na boca
+* shape
+
+
+```{r}
+
+chocolate %>%
+  group_by(company_manufacturer,company_location) %>%
+  group_by(company_location) %>%
+  count() %>%
+  arrange(desc(n))
+```
+## Basics
+- checar NAs 
+- checar outliers numericos e categoricos
+
+
+## Possibilidade
+
+Nos primeiros 15 minutos avaliei as possibilidades
+- é possível verificar o impacto do tempo e verificar a evolução das notas em relação a percentual de cacau para entender se e como o paladar dos consumidores mudou ao longo do tempo
+
+- é possivel verificar se o fato do produtor usar materia prima local ou importada parece influenciar na nota 
+
+- utilizar pacote da aula de redes neurais para refazer categoricas de maneira ordenada com a variavel resposta
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
