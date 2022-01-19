@@ -39,10 +39,8 @@ chocolate %>%
   count() %>%
   arrange(desc(n))
 ```
-## Basics
-- checar NAs 
-- checar outliers numericos e categoricos
-
+## No proximo round comece aqui 
+- quebrar por virgular assim podemos ver a caracteristica marcantes mais associada com altos valores (regressao) 
 
 ## Possibilidade
 
@@ -53,8 +51,20 @@ Nos primeiros 15 minutos avaliei as possibilidades
 
 - utilizar pacote da aula de redes neurais para refazer categoricas de maneira ordenada com a variavel resposta
 
++ 50 minutos investidos, foi notado que
+
+- apenas ingredientes tem NA fora isso não existem campos vazios 
+
+- existem alguns outliers como country_manufacturer com concentracao em EUA 
+
+- chocolate costuma ter [60%-80%] cacau 
+
+- quebrar por virgular assim podemos ver a caracteristica marcantes mais associada com altos valores (regressao) 
+
+- posso associar informacoes censitarias, idh ou geograficas como continente etc aos paises 
+
+- para entender o impacto disso na opnião das pessoas sobre o chocolate ou até mesmo questões de qualidade ou metodo de fabricacao
 ```{r pressure, echo=FALSE}
 plot(pressure)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
