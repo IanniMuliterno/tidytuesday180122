@@ -55,7 +55,7 @@ Nos primeiros 15 minutos avaliei as possibilidades
 
 - apenas ingredientes tem NA fora isso não existem campos vazios 
 
-- existem alguns outliers como country_manufacturer com concentracao em EUA 
+- existem alguns outliers, como country_manufacturer com concentracao em EUA 
 
 - chocolate costuma ter [60%-80%] cacau 
 
@@ -64,6 +64,20 @@ Nos primeiros 15 minutos avaliei as possibilidades
 - posso associar informacoes censitarias, idh ou geograficas como continente etc aos paises 
 
 - para entender o impacto disso na opnião das pessoas sobre o chocolate ou até mesmo questões de qualidade ou metodo de fabricacao
+
+ + 15 min 
+ separada coluna de ingredientes
+ 
+ +30 min 
+ separada coluna do most memorable characteristics
+ rodada a arvore de decisao ( por serem muitas variaveis categoricas e com muitos niveis, a interpretação pelo grafico é complicada, mas ler os nodes é insightful)
+ 
+ +15min
+ feito IV e WOE, requer um tratamento melhor de string, e associação de palavras com o mesmo significado para melhorar a predicao
+ palavras quebradas precisam de um squish
+ 
+ 
+ 
 ```{r pressure, echo=FALSE}
 plot(pressure)
 ```
